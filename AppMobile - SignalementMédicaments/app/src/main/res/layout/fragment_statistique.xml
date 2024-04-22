@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#007acc"
+    tools:context=".StatistiqueFragment">
+
+    <EditText
+        android:id="@+id/editTextRechercherMedicament"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="35dp"
+        android:background="@drawable/edittext_rounded_corners"
+        android:hint="CIP_13 ou CIS"
+        android:padding="20dp"
+        android:inputType="number"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/btn_Rechercher"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/editTextRechercherMedicament"
+        android:width="300dp"
+        android:text="Rechercher"
+        android:textColor="#007acc" />
+
+
+    <TextView
+        android:id="@+id/TextViewSignalements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Les signalements"
+        android:layout_below="@+id/editTextRechercherMedicament"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="267dp"
+        android:layout_below="@id/TextViewSignalements"
+        android:layout_marginTop="20dp">
+
+        <TableLayout
+            android:id="@+id/tableLayoutSignalement2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#003d66"
+            android:stretchColumns="*">
+
+            <!-- En-tête de colonnes -->
+            <TableRow>
+
+                <!-- Colonne Code CIP -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#003d66"
+                    android:ellipsize="end"
+                    android:padding="10dp"
+                    android:text="Code CIP"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <!-- Colonne Nom -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#003d66"
+                    android:ellipsize="end"
+                    android:padding="10dp"
+                    android:text="Nom"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <!-- Colonne Date -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#003d66"
+                    android:ellipsize="end"
+                    android:padding="10dp"
+                    android:text="Date"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <!-- Les signalements seront ajoutés ici dynamiquement -->
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/nb_Signalement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:text="Nombre de signalements\n       par médicament"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_below="@id/scrollView1"/>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:layout_below="@id/nb_Signalement"
+        android:layout_marginTop="10dp">
+
+        <TableLayout
+            android:id="@+id/tableLayoutCompterSignalement"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#003d66"
+
+            android:stretchColumns="*">
+
+            <!-- En-tête de colonnes -->
+            <TableRow>
+
+                <!-- Colonne Code CIP -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#003d66"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Code CIP"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="8sp" />
+
+                <!-- Colonne Nom -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#003d66"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Nom"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="8sp" />
+
+
+                <!-- Colonne Date -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#003d66"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Signalement"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="8sp" />
+            </TableRow>
+
+            <!-- Les signalements seront ajoutés ici dynamiquement -->
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/nb_ParPathologie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="Nombre de signalements\n           par pathologie"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/nb_Signalement"
+        android:layout_below="@id/scrollView1"/>
+
+    <TableLayout
+        android:id="@+id/tableLayoutSignalementPathologie"
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:layout_toRightOf="@+id/scrollView2"
+        android:layout_marginLeft="17dp"
+        android:layout_below="@+id/nb_ParPathologie"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:stretchColumns="*">
+
+        <!-- En-tête de colonnes -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="#003d66"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Pathologie"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="8sp" />
+
+            <!-- Colonne Nom -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="#003d66"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Signalements"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="8sp" />
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

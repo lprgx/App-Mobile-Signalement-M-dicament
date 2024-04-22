@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/statistique"
+            android:icon="@drawable/baseline_data_exploration_24"
+            android:title="Signalement"
+            />
+        <item
+            android:id="@+id/gestion_Admin"
+            android:icon="@drawable/baseline_supervised_user_circle_24"
+            android:title="Gestion admin"
+            />
+
+        <item
+            android:id="@+id/LogOut"
+            android:icon="@drawable/baseline_logout_24"
+            android:title="Se déconnecter"
+            />
+    </group>
+</menu>

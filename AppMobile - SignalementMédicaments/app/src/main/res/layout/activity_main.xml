@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#007acc"
+    android:id="@+id/relativeLayout"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imageLogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logo"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/fleche"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:layout_marginLeft="20dp"
+            android:onClick="True"
+            android:layout_marginTop="10dp"/>
+
+
+
+        <TextView
+            android:id="@+id/textSignalez"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signalez vos médicaments"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:layout_marginTop="150dp"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="@font/police"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextCIP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textSignalez"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:layout_marginTop="50dp"
+            android:inputType="number"
+            android:padding="20dp"
+            android:background="@drawable/edittext_rounded_corners"
+            android:hint="Tappez le code CIP à 13 chiffres"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signaler"
+            android:textColor="#007acc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/editTextCIP"
+            android:id="@+id/btn_Signaler"
+            android:fontFamily="@font/police"
+            android:width="300dp"
+            />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/qricon"
+            android:layout_below="@+id/btn_Signaler"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scanner le QR Code"
+            android:layout_centerHorizontal="true"
+            android:textColor="#007acc"
+            android:layout_marginTop="200dp"
+            android:layout_below="@+id/btn_Signaler"
+            android:id="@+id/btn_Scan"
+            android:fontFamily="@font/police"
+            android:width="200dp"
+            />
+
+        <TextView
+            android:id="@+id/textMesSignalements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mes Signalements"
+            android:layout_below="@+id/btn_Scan"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/police"
+            android:textSize="28dp" />
+
+        <TableLayout
+            android:id="@+id/tableLayoutSignalements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textMesSignalements"
+            android:layout_marginTop="20dp"
+            android:stretchColumns="*" >
+
+            <!-- En-tête de colonnes -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Colonne Code CIP -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#003d66"
+                    android:ellipsize="end"
+                    android:padding="10dp"
+                    android:text="Code CIP"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/police"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <!-- Colonne Nom -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#003d66"
+                    android:ellipsize="end"
+                    android:padding="10dp"
+                    android:text="Nom"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/police"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <!-- Colonne Date -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#003d66"
+                    android:ellipsize="end"
+                    android:padding="10dp"
+                    android:text="Date"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:fontFamily="@font/police"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <!-- Les signalements seront ajoutés ici dynamiquement -->
+        </TableLayout>
+    </RelativeLayout>
+
+</ScrollView>

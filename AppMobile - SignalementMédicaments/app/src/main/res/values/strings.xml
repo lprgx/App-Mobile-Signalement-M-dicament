@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SAEPERIODEC</string>
+    <string name="successful_login">Successful connection !</string>
+    <string name="login_failure_message">Échec de la connexion. Veuillez réessayer. Si l\'erreur persiste, redémarrez votre application.</string>
+    <string name="incorrect_email_or_password">Incorrect email or password !</string>
+    <string name="email_not_valid">Invalid email format</string>
+    <string name="empty_field">Please fill in all fields.</string>
+    <string name="invalid_password_format">Password must be at least 8 characters long, contain at least one uppercase letter, and one digit.</string>
+    <string name="registration_failure_message">Échec de l\'inscription. Veuillez réessayer. Si l\'erreur persiste, redémarrez votre application.</string>
+    <string name="email_already_exits">Incorrect email, an account is already associated with this email</string>
+    <string name="load_failure">Unable to load information relating to your home. Please log in again. If the error persists, restart your application and check your Internet connection.</string>
+    <string name="confirmation_logout_message">Are you sure you want to logout ?</string>
+    <string name="cancel">Cancel</string>
+    <string name="logOut">Logout</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
